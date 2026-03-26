@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
-"""Asynchronous generator yielding random numbers every second."""
+"""
+    contains the function async_generator
+    that yeilds a random number every second
+
+    Imports:
+        - asyncio
+        - typing
+"""
 
 import asyncio
+from typing import Generator
 import random
-from typing import AsyncGenerator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
-    """Yield a random float between 0 and 10 every second, 10 times."""
+async def async_generator() -> Generator[float, None, None]:
+    """
+        Yields a random number every second
+    """
     for _ in range(10):
-        await asyncio.sleep(1)         # wait asynchronously
-        yield random.uniform(0, 10)    # yield random float
+        await asyncio.sleep(1)
+        yield random.uniform(0, 10)
