@@ -1,4 +1,4 @@
-const displayMessage = (msg) => {
-    process.stdout.write(msg);
+const displayMessage = (STDOUT) => {
+    process.stdout.write(STDOUT);
 }
 module.exports = displayMessage;
