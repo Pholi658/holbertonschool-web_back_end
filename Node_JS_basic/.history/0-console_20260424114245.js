@@ -1,4 +1,4 @@
 const displayMessage = (STDOUT) => {
-    console.log(STDOUT);
+    co(STDOUT);
 }
 module.exports = displayMessage;
