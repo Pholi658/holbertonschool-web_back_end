@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-async function readDatabase(path) {
+function readDatabase(path) {
   return new Promise((resolve, reject) => {
     try {
       const data = fs.readFileSync(path, 'utf8');

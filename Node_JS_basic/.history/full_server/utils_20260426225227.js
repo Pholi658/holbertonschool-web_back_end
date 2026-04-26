@@ -3,7 +3,7 @@ import fs from 'fs';
 async function readDatabase(path) {
   return new Promise((resolve, reject) => {
     try {
-      const data = fs.readFileSync(path, 'utf8');
+      const data = fs.readFile(path, 'utf8');
       const linesArray = data.split('\n');
       const studentsByField = {};
       linesArray.shift();
